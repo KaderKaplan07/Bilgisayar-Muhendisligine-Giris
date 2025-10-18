@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int islem=0;
+    int sayi1=0;
+    int sayi2=0;
+    int cevap=0;
+
+    cout << "yapmak istediğiniz işlemi seciniz: (1-toplama,2-cıkarma,3-carpma,4-bolme): ";
+    cin >> islem;
+
+    cout << "ilk sayiyi giriniz: ";
+    cin >> sayi1;
+
+    cout << "ikinci sayiyi giriniz: ";
+    cin >> sayi2;
+
+    if(islem == 1){
+        cevap = sayi1 + sayi2;
+    }
+    else if(islem == 2){
+        cevap = sayi1 - sayi2;
+    }
+    else if(islem == 3){
+        cevap = sayi1 * sayi2;
+    }
+    else if(islem == 4){
+        if(sayi2 == 0){
+            cout << "Hata: Sıfıra bölme yapılamaz!";
+            return 1;
+        }
+        cevap = sayi1 / sayi2;
+    }
+    else {
+        cout << "Geçersiz işlem seçtiniz!";
+        return 1;
+    }
+
+    cout << "cevap: " << cevap;
+    return 0;
+}
